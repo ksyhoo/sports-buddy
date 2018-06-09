@@ -1,7 +1,8 @@
+Move api key form url to request header (CURL??)
+
 HTTPS
 
 LOG/REG
-
     email  registartion confirm
     Edit: user name, email , rest pass, 
 
@@ -12,7 +13,7 @@ Your ACT / Searched ACT
     paginacja
 
 USER Comm
-    implement!!!!!!!!!!!!!
+    implement!
 
 SEARCH 
     Polskie znaki

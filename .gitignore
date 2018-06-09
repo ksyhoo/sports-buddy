@@ -8,10 +8,10 @@
 
 # production
 /build
-#config.json
-#start.sh
+config.json
+start.sh
 #TODO
-#/views/icludes/api.pug
+/views/icludes/api.pug
 
 # misc
 .DS_Store
