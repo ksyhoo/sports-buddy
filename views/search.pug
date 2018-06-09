@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    include includes/api.pug
+    script(async src="/javascripts/googlePlaces.js")
+
+    if (user)
+        .actwrapper.container-fluid
+         
+            p Search Page
+
+            include autocomplete
+               
+
+            form(role='form', method='get', action='/search/user/' + user.id +'/')
+                .form-group(style=' visibility: hidden; height: 0px; width: 0px')
+                    input.form-control(type='text', name="city", placeholder='City', id='locality', disabled='true' )
+                    input.form-control(type='text', name="street", placeholder='Street',id='route', disabled='true')        
+                    input.form-control(type='text', name="streetnumber", placeholder='Street number',id='street_number', disabled='true')        
+                    input.form-control(type='text', name="zipcode", placeholder='Zip Code', id='postal_code', disabled='true')        
+                .form-group.form-control(id='loginpagebuttons') 
+                    button.btn.btn-default.btn-sm(type='submit') Submit
+                    button.btn.btn-primary.btn-sm(type='reset') Cancel
+
+
+        .actwrapper.container-fluid
+
+        if (search_post)                                
+            include searchresults

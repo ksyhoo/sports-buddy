@@ -1,0 +1,80 @@
+extends layout
+block content
+
+  script(src="/javascripts/elementsManipulation.js", type="text/javascript")
+
+  include includes/api.pug
+  script(async src="/javascripts/googlePlaces.js")
+  
+  if (user)
+
+  p.text-center() Add a Activity
+  
+  .actwrapper.container-fluid
+    include autocomplete
+      .separator.container-fluid
+    form(role='form', action='/activity/user/' + user.id, method='post')              
+      .form-group
+        input.form-control.form-control-sm(type='text', name="city", placeholder='City', id='locality', disabled='true')
+        input.form-control.form-control-sm(type='text', name="street", placeholder='Street',id='route', disabled='true')        
+        input.form-control.form-control-sm(type='text', name="streetnumber", placeholder='Street number',id='street_number', disabled='true')        
+        input.form-control.form-control-sm(type='text', name="zipcode", placeholder='Zip Code', id='postal_code', disabled='true')        
+      .separator.container-fluid
+
+      .form-group.form-control(id='checkboxes')
+        p.text-center Chose day of the week
+          - var a = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]; 
+          - for (var x = 0; x < 7; x++)
+            .form-check.form-check-inline
+              input.form-check-input(type='checkbox', value=a[x], name='dayoftheweek', id='inlineCheckBox' + x, onclick="disableDate()")
+              label.form-check-label(for='inlineCheckBox' + x) #{a[x]}    
+
+      .form-group.form-control
+        p.text-center Or specific date
+        input.form-control.form-control-sm(type='date', name='specificday', value='', id='activityDate', onchange='disableCheckbox1()' ) 
+      
+      .separator.container-fluid
+
+      .form-group.form-control
+        select.custom-select.form-control.form-control-sm(name='activity', placeholder='asd ')
+          option.selected(disabled) Choose Activity
+          option(value="Jazda na Rowerze") Jazda na Rowerze
+          option(value="Biegi1") Biegi 
+          option(value="Sporty Walki") Sporty Walki
+          option(value="Siłownia i Fitnness") Siłownia i Fitnness
+          option(value="Sporty Wodne") Sporty Wodne
+        input.form-control.form-control-sm(type='text', name='usercomment', placeholder='Describe your activity', id='user_commnet')
+
+      .separator.container-fluid
+      
+      .form-group.form-control
+        button.btn.btn-default.btn-sm(type='submit') Submit
+        button.btn.btn-primary.btn-sm(type='reset', onclick="makeFromActive()") Cancel
+
+
+      .separator.container-fluid
+  br
+  
+  p.text-center Your activities
+  .actwrapper.container-fluid(style='padding-bottom:200px')
+    each activity in activity_create_get
+      .listactwrapper.container-fluid(style='border-top : 2px solid lightgray; padding-top:30px')
+        .row
+          .col-md-4.text-right Activity
+          .col-md-6 #{activity.activity}
+        .row
+          .col-md-4.text-right Adress
+          .col-md-8 #{activity.city} #{activity.zipcode} 
+        .row
+          .col-md-4.text-right Date
+          .col-md-8 #{activity.dayoftheweek} #{activity.specificday}
+        .row
+          .col-md-4.text-right User commnet
+          .col-md-8 #{activity.usercomment}
+        .row  
+           a.nav-link.active(href='/activity/user/delete/'+activity.id) Del
+           a.nav-link.active(href='#') Edit (to implement) 
+    else 
+      p No Activities
+  
+

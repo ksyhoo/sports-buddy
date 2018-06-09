@@ -1,0 +1,23 @@
+p Search page results
+
+each activity in search_post
+  .actwrapper.container-fluid
+        
+    .listactwrapper.container-fluid(style='border-top : 2px solid lightgray; padding-top:30px')
+        .row
+          .col-md-4.text-right Activity
+          .col-md-6 #{activity.activity}
+        .row
+          .col-md-4.text-right Adress
+          .col-md-8 #{activity.city} #{activity.zipcode} 
+        .row
+          .col-md-4.text-right Date
+          .col-md-8 #{activity.dayoftheweek} #{activity.specificday}
+        .row
+          .col-md-4.text-right User commnet
+          .col-md-8 #{activity.usercomment}
+        .row  
+           a.nav-link.active(href='#') Send MSG (to implement)
+ 
+else 
+    p No matches

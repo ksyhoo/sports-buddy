@@ -1,0 +1,10 @@
+if errors 
+  .errors
+    .ul
+      for error in errors
+        .li!= error.msg
+
+if error        
+  .errors
+    .ul
+      .li #{error}

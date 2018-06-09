@@ -1,0 +1,21 @@
+nav.navbar-toggleable-md.navbar-light.sticky-top
+    if (!user)
+      ul.navbar-nav(style='text-align:center')
+        li.nav-item
+          a.nav-link.active(href="/login") Login
+        li.nav-item
+          a.nav-link.active(href="/register") Register
+        li.nav-item
+          a.nav-link.active(href="/") Home  
+    if (user)
+      ul.navbar-nav
+        li.nav-item  
+          a.nav-link.active(href="/logout") Loged in as #{user.username} + #{user.email} 
+        li.nav-item
+          a.nav-link.active(href="/activity/user/" + user.id) Activities    
+        li.nav-item
+          a.nav-link.active(href="/search/user/" + user.id) Search    
+        li.nav-item
+          a.nav-link.active(href="/user/" + user.id) Home    
+        li.nav-item 
+          a.nav-link.active(href="/test/user/" + user.id) Test    

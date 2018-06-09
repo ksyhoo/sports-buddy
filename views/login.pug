@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container.rounded-0(id='loginpage')
+    .row
+      .col-md-4
+
+        p Login Page
+        form(role='form', action="/login",method="post")
+          
+          .form-group
+            input.form-control(type='text', name="username", placeholder='Enter Username')
+            input.form-control(type='password', name="password", placeholder='Password')
+          
+          .form-group.form-control(id='loginpagebuttons')
+            
+            button.btn.btn-default(type='submit') Submit
+            button.btn.btn-primary(type="reset") Cancel
+      
+      .col-md-8
+        
+        p Login help Placeholder
+        p(style="color:red") There's no SSl so don't use any legitimate credentials(wanted completely free deploy).
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi assumenda quasi atque. Exercitationem officiis corrupti ipsum minima animi? Ea nisi dicta dolorem possimus, eos fuga. Accusantium omnis hic impedit minima.  
+        

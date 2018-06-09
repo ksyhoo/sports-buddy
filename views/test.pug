@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+    script(src="/javascripts/elementsManipulation.js", type="text/javascript")
+
+    .container
+        if (user)
+            include autocomplete
+                button.btn.btn-default.btn-sm(type='submit') Submit                             
+
+    
+            

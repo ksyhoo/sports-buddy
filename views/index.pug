@@ -1,0 +1,12 @@
+extends layout
+
+block content
+ 
+  if (!user)
+    .container(id='unauthedMain')
+      a.nav-link.active(href='/register') Register today to find your sports pratner
+      
+      
+  if(user)        
+    .container(id='unauthedMain')
+      a.nav-link.active(href='/search/user/'+user.id) Search for activities near you

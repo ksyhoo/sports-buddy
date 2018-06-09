@@ -1,0 +1,234 @@
+body {
+  background-color: #f6f6f6;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+p {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.ul {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.actwrapper {
+  max-width: 700px;
+}
+
+.listactwrapper {
+  border-top: 2px solid lightgray;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.listactwrapper .col-md-4 {
+  font-weight: 600;
+}
+
+.separator {
+  border-bottom: 2px solid lightgray;
+  padding-top: 2px;
+  margin-bottom: 0px;
+  max-width: 400px;
+}
+
+.btn-default {
+  background: lightgray;
+  color: rgba(51, 51, 51, 0.658);
+  border: none;
+}
+
+.btn-default:hover {
+  background: #d8ae3994;
+  color: black;
+}
+
+.btn-primary {
+  border: none;
+  background: whitesmoke;
+  color: darkgray;
+}
+
+.btn-primary:hover {
+  background: gray;
+  color: darkgray;
+}
+
+.errors .ul {
+  list-style: none;
+  color: red;
+}
+
+#activityDate {
+  height: 35px;
+  width: auto;
+  display: inline-block;
+}
+
+#checkboxes {
+  display: inline-block;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#unauthedMain {
+  background-image: url("../images/background3.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 569px;
+  background-color: #f6f6f6;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 110px;
+  margin-top: 90px;
+}
+
+#unauthedMain .nav-link {
+  box-shadow: inset 0 1px 1px #9c7814, 0 0 8px #9c7814;
+}
+#unauthedMain .nav-link:hover {
+  box-shadow: inset 0 1px 1px #bb9223, 0 0 8px #bb9223;
+}
+
+#unauthedMain .nav-link:visited {
+  color: darkgray;
+}
+
+#loginpagebuttons {
+  background-color: #f6f6f6;
+  padding: 15px 0px 15px 0px;
+  margin: 0px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(34, 34, 34, 0.658);
+}
+.nav-link:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+nav a:hover {
+  background-color: #d8ae3994 !important;
+}
+
+.navbar-nav {
+  background-color: #dadada;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding-top: 20px;
+  background-color: #dadada;
+  width: 100%;
+  left: 0;
+  margin-top: 100px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.form-control {
+  border: rgb(110, 110, 110);
+  text-align: center;
+  margin: 5px;
+}
+
+.form-control:focus {
+  border-color: #d8ae3994;
+  box-shadow: inset 0 1px 1px #d8ae3994, 0 0 8px #d8ae3994;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  font: 14px/20px "Open Sans", Arial, sans-serif;
+  color: rgba(51, 51, 51, 0.884);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1px solid #d8ae3994;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:disabled + label:before {
+  content: "";
+  color: rgba(129, 129, 129, 0.884);
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1px solid rgb(110, 110, 110);
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
+}
