@@ -104,4 +104,7 @@ h2 {
   .column {
     width: 100%;
   }
+  .footer {
+    position: static;
+  }
 }

@@ -7,13 +7,13 @@
 var app = require("../app");
 var debug = require("debug")("passport-local-express4:server");
 var http = require("http");
-var https = require("https");
-var fs = require("fs");
+// var https = require("https");
+// var fs = require("fs");
 
-var httpsOptions = {
-  key: fs.readFileSync("./sslcert/private.key"),
-  cert: fs.readFileSync("./sslcert/mydomain.csr")
-};
+// var httpsOptions = {
+//   key: fs.readFileSync("./sslcert/private.key"),
+//   cert: fs.readFileSync("./sslcert/mydomain.csr")
+// };
 /**
  * Get port from environment and store in Express.
  */

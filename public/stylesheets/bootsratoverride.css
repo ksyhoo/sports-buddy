@@ -232,3 +232,13 @@ input[type="checkbox"]:disabled + label:before {
   -webkit-transition: all 0.12s, border-color 0.08s;
   transition: all 0.12s, border-color 0.08s;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    position: static;
+  }
+  nav {
+    position: none;
+    text-align: center;
+  }
+}
